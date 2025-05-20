@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookNook</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>BookNook</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="search">
+      <h2>Find Your Next Book</h2>
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search for books..." required />
+        <select id="genre-select">
+          <option value="">All Genres</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Science">Science</option>
+          <option value="History">History</option>
+          <option value="Mystery">Mystery</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+      <div id="book-list" class="book-list"></div>
+    </section>
+
+    <section id="recommendations">
+      <h2>Recommended Books</h2>
+      <div id="recommendation-list" class="book-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BookNook. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal for book details -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close-button">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
